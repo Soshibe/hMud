@@ -43,6 +43,18 @@ private:
 
 };
 
+class keyboard_class
+{
+public:
+    keyboard_class() {
+    };
+    ~keyboard_class() {
+    };
+    void get_keystate();
+private:
+
+};
+
 class player : object
 {
 public:
@@ -57,18 +69,6 @@ private:
 
 };
 
-class keyboard_class
-{
-public:
-    keyboard_class() {
-    };
-    ~keyboard_class() {
-    };
-    get_keystate();
-private:
-
-};
-
 class dungeon : object
 {
 public:
@@ -76,7 +76,7 @@ public:
     };
     ~dungeon() {
     };
-    add_dungeon(dungeon x);
+    void add_dungeon(dungeon x);
 private:
 
 };
