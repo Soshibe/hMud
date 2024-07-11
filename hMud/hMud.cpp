@@ -8,6 +8,9 @@ class pos
 {
 public:
     pos() {
+        x = 0;
+        y = 0;
+        z = 0;
     };
     ~pos() {
     };
@@ -23,6 +26,10 @@ class object
 {
 public:
     object() {
+        uid = 1337;
+    };
+    object(int id) {
+        uid = id;
     };
     ~object() {
     };
@@ -32,10 +39,19 @@ private:
 
 };
 
+class objectFactory
+{
+
+};
+
 class actor : object
 {
 public:
     actor() {
+        uid = 1337;
+    };
+    actor(int id) {
+        uid = id;
     };
     ~actor() {
     };
@@ -59,6 +75,10 @@ class player : object
 {
 public:
     player() {
+        uid = 1337;
+    };
+    player(int id) {
+        uid = id;
     };
     ~player() {
     };
@@ -72,7 +92,8 @@ private:
 class dungeon : object
 {
 public:
-    dungeon() {
+    dungeon(int id) {
+        uid = id;
     };
     ~dungeon() {
     };
@@ -169,6 +190,6 @@ private:
 
 int main()
 {
-    player pOne;
+    player pOne(0);
     return 0;
 }
